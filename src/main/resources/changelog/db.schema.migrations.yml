@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-init-extensions-and-types
+      author: anatoly_dudko@icloud.com
+      changes:
+        - tagDatabase:
+            tag: "1"
+        - sqlFile:
+            path: changelog/migrations/1-init.sql
+      rollback:
+        - sqlFile:
+            path: changelog/rollbacks/1-init.sql
+  - changeSet:
+      id: 2-creating-order
+      author: anatoly_dudko@icloud.com
+      changes:
+        - tagDatabase:
+            tag: "2"
+        - sqlFile:
+            path: changelog/migrations/2-creating-order.sql
+      rollback:
+        - sqlFile:
+            path: changelog/rollbacks/2-creating-order.sql
